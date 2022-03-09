@@ -17,7 +17,7 @@ import { BodyComponent } from './body/body.component';
     CUSTOM_ELEMENTS_SCHEMA
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

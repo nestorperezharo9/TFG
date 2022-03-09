@@ -1,6 +1,20 @@
-.container {
-    display: flex;
+.container1 {
     margin: 0 auto;
+    margin: 130px 130px 130px 130px;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+}
+
+.icon {
+    margin-left: 800px;
+}
+
+.pequeño {
+    margin: 0 auto;
+    margin: 10px 630px 80px 630px;
 }
 
 .cont1 {
@@ -9,9 +23,19 @@
     width: 50%;
 }
 
+.lab {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
 .cont2 {
-    width: 400px;
-    height: 400px;
+    margin-left: 70px;
+}
+
+img {
+    width: 600px;
+    height: 500px;
 }
 
 .titulo1 {
