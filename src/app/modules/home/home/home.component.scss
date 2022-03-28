@@ -1,6 +1,6 @@
 .container1 {
     margin: 0 auto;
-    margin: 130px 130px 130px 130px;
+    margin: 130px 130px 60px 130px;
 }
 
 .containerimg {
@@ -13,8 +13,12 @@
     display: flex;
 }
 
+.wrapper {
+    background-color: rgba(36, 35, 35, 0.664);
+}
+
 .icon {
-    margin-left: 800px;
+    margin: 40px 0px 0px 40px;
 }
 
 .pequeño {
@@ -26,6 +30,13 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+}
+
+.hr {
+    color: #FFA100;
+    margin-left: 60px;
+    width: 80%;
+    height: 8px;
 }
 
 .lab {
@@ -49,7 +60,22 @@ img {
     padding: 15px;
     font-size: 35px;
     line-height: 45px;
-    color: #5d7e4c;
+    color: rgb(5, 71, 109);
+}
+
+.column {
+    margin: 0px 0px 90px 90px;
+    column-count: 3;
+}
+
+.columnboton {
+    margin: auto;
+}
+
+.content {
+    background-color: #FFD07F;
+    width: 450px;
+    height: 300px;
 }
 
 .text {
@@ -58,6 +84,15 @@ img {
     margin: auto;
     font-style: oblique;
     font-weight: bold;
+}
+
+.botoninfo {
+    text-align: center;
+}
+
+.textblue {
+    font-family: "Rubik",Arial,Helvetica,sans-serif;
+    color: #0066a1;
 }
 
 .titulo2 {
