@@ -1,0 +1,58 @@
+<div class="logo">
+    <img title="Logotipo de la ULPGC, abre en ventana nueva" src="assets/img/logonaranja.png">
+</div>
+<div class="pagewrap">
+    <form class="form" [formGroup]="form" (ngSubmit)="login()">
+      <h3 class="title">Acceder a MiDIS</h3>
+      <div class="container">
+        <input class="container__input" type="text" formControlName="name" placeholder="12345678" value="" required>
+        <label id="userLabel" for="name" class="container__label">DNI</label>
+      </div>
+      <div class="container">
+        <input class="container__input" type="password" formControlName="password" placeholder="*********" value="" required>
+        <label id="passLabel" for="password" class="container__label" >Contraseña</label>
+      </div>
+      <button class="form__submit" id="submit" type="button" value="submit">Submit</button>
+    </form>
+  </div>
+
+<!--
+
+<div class="container1">
+    <div class="logo">
+        <img title="Logotipo de la ULPGC, abre en ventana nueva" src="assets/img/logologin.png">
+    </div>
+    <div class="row1">
+
+        <div class="card">
+            <form [formGroup]="form" (ngSubmit)="login()">
+                <h1>Servicio de Identificación Centralizada</h1>
+                <div for="textosesion" id="ppito">Inicie sesión para poder continuar</div> 
+
+                <section class="form-group form-inline">
+                    <label for="username">DNI (sin letra) / Pasaporte</label>
+                    <div>
+                        <input class="form-control ulpgcds-icon-user required" formControlName="name" placeholder="&#xe938;12345678"                   
+                            type="text" autocomplete="off" value=""/>
+                    </div>
+                </section>
+                <section class="form-group form-inline">
+                    <label for="password">Contraseña</label>
+                    <div>
+                        <input class="form-control ulpgcds-icon-user required" type="password" formControlName="password" placeholder="&#xe92a;*********"
+                            autocomplete="off" value=""/>
+                        <span id="capslock-on" style="display:none;">
+                            <p>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <span>¡La tecla BLOQ MAYÚS está activada!</span>
+                            </p>
+                        </span>
+                    </div>
+                </section>
+
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>  
+</div>
+-->

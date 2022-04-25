@@ -8,7 +8,7 @@
             </a>
             <a href="/">
                 <span>Departamento de Informática y Sistemas</span>
-                <a href="http://localhost:4200/home" title="Departamento de Informática y Sistemas de la Universidad de la ULPGC">
+                <a [routerLink]="['/home']" title="Departamento de Informática y Sistemas de la Universidad de la ULPGC">
                     <img src="assets/img/departamento.PNG" 
                     alt="Logo del Departamento de Informática y Sistemas" class="logo_standard celr_logo_daea">
                 </a>
@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://identificate.ulpgc.es/cas/login?service=https%3A%2F%2Fwww2.ulpgc.es%2Findex.php%3Fpagina%3Dmiulpgc%26ver%3Dmiulpgc%26login%3Dmlpgc"
+                    <a [routerLink]="['/login']"
                         class="ulpgcds-btn ulpgcds-btn--small ulpgcds-btn--primary">
                         <span class="ulpgcds-btn__icon ulpgcds-icon-user" aria-hidden='true'></span>
                         Login
