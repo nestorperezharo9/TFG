@@ -1,20 +1,17 @@
-<div class="logo">
-    <img title="Logotipo de la ULPGC, abre en ventana nueva" src="assets/img/logonaranja.png">
-</div>
 <div class="pagewrap">
     <form class="form" [formGroup]="form" (ngSubmit)="login()">
       <h3 class="title">Acceder a MiDIS</h3>
       <div class="container">
-        <input class="container__input" type="text" formControlName="name" placeholder="12345678" value="" required>
+        <input class="container__input" type="text" formControlName="name" placeholder="12345678X">
         <label id="userLabel" for="name" class="container__label">DNI</label>
       </div>
       <div class="container">
-        <input class="container__input" type="password" formControlName="password" placeholder="*********" value="" required>
+        <input class="container__input" type="password" formControlName="password" placeholder="*********">
         <label id="passLabel" for="password" class="container__label" >Contraseña</label>
       </div>
-      <button class="form__submit" id="submit" type="button" value="submit">Submit</button>
+      <button class="form__submit" type="submit">Iniciar Sesión</button>
     </form>
-  </div>
+</div>
 
 <!--
 

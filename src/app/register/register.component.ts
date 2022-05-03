@@ -3,11 +3,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   public form: FormGroup;
 
@@ -18,13 +18,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       name: new FormControl(null, Validators.required),
+      identifier: new FormControl(null, Validators.required),
       password: new FormControl(null, Validators.required)
     })
   }
 
-  public async login(): Promise<void> {
+  public async register(): Promise<void> {
     if (this.form.valid) {
-      await this.userService.login(this.form.value);
+      await this.userService.register(this.form.value);
     }
   }
 

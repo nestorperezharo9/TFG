@@ -1,0 +1,18 @@
+<div class="pagewrap">
+    <form class="form" [formGroup]="form" (ngSubmit)="register()">
+        <h3 class="title">Dar de ALTA en MIDIS</h3>
+        <div class="container">
+          <input class="container__input" type="text" formControlName="name" placeholder="Nombre Completo">
+          <label for="name" class="container__label">Nombre</label>
+        </div>
+        <div class="container">
+          <input class="container__input" type="text" formControlName="identifier" placeholder="12345678X">
+          <label for="identifier" class="container__label">DNI</label>
+        </div>
+        <div class="container">
+          <input class="container__input" type="password" formControlName="password" placeholder="*********">
+          <label for="password" class="container__label" >Contraseña</label>
+        </div>
+        <button class="form__submit" type="submit">Dar de ALTA</button>
+    </form>
+</div>

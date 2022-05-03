@@ -1,0 +1,10 @@
+<div class="pagewrap">
+    <form class="form" [formGroup]="form" (ngSubmit)="unsubscribe()">
+        <h3 class="title">Dar de BAJA en MIDIS</h3>
+        <div class="container">
+          <input class="container__input" type="text" formControlName="identifier" placeholder="12345678X">
+          <label for="identifier" class="container__label">DNI</label>
+        </div>
+        <button class="form__submit" type="submit">Eliminar</button>
+    </form>
+</div>
