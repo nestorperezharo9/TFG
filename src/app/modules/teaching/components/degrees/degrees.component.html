@@ -1,0 +1,10 @@
+<div class="container1">
+    <div class="container">
+        <ul>
+            <li *ngFor="let degree of degrees">{{degree.name}}</li>
+        </ul>
+    </div>
+    <div class="container">
+        {{getDepartmentValue(signatures[0].department)}}
+    </div>
+</div>

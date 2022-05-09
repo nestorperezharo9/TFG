@@ -46,12 +46,12 @@
     </div><br>
     <nav class="ulpgcds-header__bottom" id="main-menu">
         <ul class="ulpgcds-header__bottom__menu">
-            <li><a href="/code/demo/">Docencia</a>
+            <li><a class="color_blanco">Docencia</a>
                 <ul>
-                    <li><a href="/code/demo/">Grados</a></li>
-                    <li><a href="/code/demo/">Dobles Grados</a></li>
-                    <li><a href="/code/demo/">Máster y Doctorados</a></li>
-                    <li><a href="/code/demo/">Trabajos Fin de Título</a></li>
+                    <li><a [routerLink]="['/teaching/degrees']">Grados</a></li>
+                    <li><a [routerLink]="['/teaching/masters']">Máster</a></li>
+                    <li><a [routerLink]="['/teaching/doctorates']">Doctorados</a></li>
+                    <li><a [routerLink]="['/teaching/investigacion']">Investigación</a></li>
                 </ul>
                 <span></span>
             </li>

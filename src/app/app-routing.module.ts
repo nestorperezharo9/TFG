@@ -30,6 +30,10 @@ const routes: Routes = [
     {
         path: "contact",
         component: ContactComponent
+    },
+    {
+        path: "teaching",
+        loadChildren: () => import("./modules/teaching/teaching.module").then((m) => m.TeachingModule)
     }
 ]
 
