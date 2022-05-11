@@ -16,13 +16,19 @@ export interface Signature {
 }
 
 export enum Specialty {
-    "TIC" = "FUNDAMENTOS EN TECNOLOGÍAS DE LOS SISTEMAS DE INFORMACIÓN",
-    "NONE" = "NONE"
+    "TIC" = "TECNOLOGÍAS DE LA INFORMACIÓN",
+    "IS" = "INGENIERÍA DEL SOFTWARE",
+    "COMP" = "COMPUTACIÓN",
+    "IC" = "INGENIERÍA DE COMPUTADORES",
+    "NONE" = "NONE",
+    "OPT" = "OPTATIVAS GENERALES (PROFUNDIZACIÓN CURRICULAR)"
 }
 
 export enum Department {
-    "SYSTEMS" = "INFORMATICA Y SISTEMAS",
-    "PHILOLOGY" = "FILOLOGÍA MODERNA, TRADUCCIÓN E INTERPRETACIÓN"
+    "SYSTEMS" = "INFORMÁTICA Y SISTEMAS",
+    "PHILOLOGY" = "FILOLOGÍA MODERNA, TRADUCCIÓN E INTERPRETACIÓN",
+    "TELEFORMATION" = "TELEFORMACIÓN",
+    "NONE" = ""
 }
 
 export enum SignatureType {
@@ -33,6 +39,6 @@ export enum SignatureType {
 
 export enum SignatureCharacter {
     "SIGNATURE" = "ASIGNATURA",
-    "PRACTICES" = "PRACTICAS EXTERNAS",
-    "TFT" = "TRABAJO FIN DE TITULO"
+    "PRACTICES" = "PRÁCTICAS EXTERNAS",
+    "TFT" = "TRABAJO DE FIN DE TÍTULO"
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Doctorate } from 'src/app/model/doctorate.model';
 
 @Component({
   selector: 'app-doctorates',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctorates.component.scss']
 })
 export class DoctoratesComponent implements OnInit {
+
+  public doctorates: Doctorate[] = []
+  //public signatures: Signature[] = []
 
   constructor() { }
 
