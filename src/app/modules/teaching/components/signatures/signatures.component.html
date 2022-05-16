@@ -1,0 +1,59 @@
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">{{ signature.code }} - {{ signature.name }}</h3><hr class="hr">
+        <div>
+            <table class="tablesaw" data-tablesaw-mode="stack">
+                <thead>
+                    <tr>
+                        <th>Especialidad</th>
+                        <th>Centro</th>
+                        <th>Departamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ getSpecialty(signature.specialty) }}</td>
+                        <td>{{ signature.school }}</td>
+                        <td>{{ getDepartment(signature.department) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="tablesaw" data-tablesaw-mode="stack">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Cáracter</th>
+                        <th>Duración</th>
+                        <th>Créditos</th>
+                        <th>Curso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ getType(signature.type) }}</td>
+                        <td>{{ getCharacter(signature.character) }}</td>
+                        <td>{{ signature.duration }} .semestre</td>
+                        <td>Total: {{ signature.credits }}</td>
+                        <td>{{ signature.course }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="tablesaw" data-tablesaw-mode="stack">
+                <thead>
+                    <tr>
+                        <th>Proyecto Docente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a [href]='signature.teachingProject' target="_blank"> Proyecto Docente [2021/2022]</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

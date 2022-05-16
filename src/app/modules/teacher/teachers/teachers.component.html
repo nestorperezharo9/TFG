@@ -1,0 +1,40 @@
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">Miembros del Departamento</h3>
+        <h3 class="titulo2">Personal Docente</h3><hr class="hr">
+        <div class="ulpgcds-accordion" *ngFor="let teacher of teachers">
+            <div *ngIf="staff==='teacher'">
+            <!--
+                <h3>
+                    <h2>Área de conocimiento:</h2><button aria-controls="accordion-panel-0" aria-expanded="true">
+                        <span class="ulpgcds-accordion__title"></span>
+                        {{ teacher.knowledgeArea }}
+                    </button>
+                </h3>
+            -->
+                <div>
+                    <div class="ulpgcds-accordion__panel">
+                        <div aria-hidden="false" aria-labelledby="accordion-button-0" class="ulpgcds-accordion__content" role="region">
+                            <table class="tablesaw" data-tablesaw-mode="stack">
+                                <thead>
+                                    <tr>
+                                        <th>Apellidos, Nombre</th>
+                                        <th>Correo</th>
+                                        <th>Teléfono</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="">{{ teacher.surnames }}, {{ teacher.name }} </a></td>
+                                        <td>{{ teacher.email }}</td>
+                                        <td>{{ teacher.telephone }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -30,6 +30,4 @@ export class DegreesComponent implements OnInit {
       });
   }
 
-
-
 }

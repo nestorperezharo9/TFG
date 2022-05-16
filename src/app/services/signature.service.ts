@@ -16,6 +16,10 @@ export class SignatureService {
     }
 
     public async findByCourseId(courseId: string): Promise<Signature[]> {
-        return this.httpService.get<Signature[]>(`http://localhost:8080/signatures/${courseId}`).toPromise();
+        return this.httpService.get<Signature[]>(`http://localhost:8080/signatures/course/${courseId}`).toPromise();
+    }
+
+    public async findById(id: string): Promise<Signature> {
+        return this.httpService.get<Signature>(`http://localhost:8080/signatures/${id}`).toPromise();
     }
 }

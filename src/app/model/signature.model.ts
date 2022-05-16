@@ -40,13 +40,13 @@ export enum Department {
 }
 
 export enum SignatureType {
-    "OBLIGATORY" = "OBLIGATORIA",
-    "OPTIONAL" = "OPCIONAL",
-    "BASIC" = "BASICA"
+    "OBLIGATORY" = "Obligatoria",
+    "OPTIONAL" = "Opcional",
+    "BASIC" = "Básica"
 }
 
 export enum SignatureCharacter {
-    "SIGNATURE" = "ASIGNATURA",
-    "PRACTICES" = "PRÁCTICAS EXTERNAS",
-    "TFT" = "TRABAJO DE FIN DE TÍTULO"
+    "SIGNATURE" = "Asignatura",
+    "PRACTICES" = "Prácticas Externas",
+    "TFT" = "Trabajo de Fin de Título"
 }

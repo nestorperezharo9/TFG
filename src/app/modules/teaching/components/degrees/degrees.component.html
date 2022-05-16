@@ -23,7 +23,7 @@
                             <tbody>
                                 <tr *ngFor="let signature of signatures[degree.name]">
                                     <td>{{ signature.code }}</td>
-                                    <td><a href="">{{ signature.name }}</a></td>
+                                    <td><a [routerLink]="['/teaching','signatures',signature.id]">{{ signature.name }}</a></td>
                                     <td>{{ signature.plan }}</td>
                                 </tr>
                             </tbody>

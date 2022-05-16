@@ -4,6 +4,7 @@ import { DegreesComponent } from './components/degrees/degrees.component';
 import { MastersComponent } from './components/masters/masters.component';
 import { DoctoratesComponent } from './components/doctorates/doctorates.component';
 import { TeachingRoutingModule } from './teaching-routing.module';
+import { SignaturesComponent } from './components/signatures/signatures.component';
 
 
 
@@ -11,7 +12,8 @@ import { TeachingRoutingModule } from './teaching-routing.module';
   declarations: [
     DegreesComponent,
     MastersComponent,
-    DoctoratesComponent
+    DoctoratesComponent,
+    SignaturesComponent
   ],
   imports: [
     CommonModule,

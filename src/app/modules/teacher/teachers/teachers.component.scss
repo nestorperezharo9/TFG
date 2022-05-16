@@ -1,24 +1,12 @@
 .container1 {
-    margin: 165px 0px 40px 0px;
-}
-
-iframe {
+    margin: 0 auto;
     margin: 165px 0px 40px 0px;
 }
 
 .container {
     margin: 0 auto;
     display: flex;
-}
-
-.cont1 {
-    display: flex;
     flex-direction: column;
-    width: 50%;
-}
-
-.cont2 {
-    margin-left: 70px;
 }
 
 .titulo1 {
@@ -39,15 +27,7 @@ iframe {
     color: #0066a1;
 }
 
-.titulo3 {
-    font-family: "Rubik",Arial,Helvetica,sans-serif;
-    padding: 8px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-}
-
-hr {
+.hr {
     color: #FFB433;
     height: 4px;
 }
