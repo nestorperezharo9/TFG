@@ -14,4 +14,8 @@ export class SignatureService {
     public async findAll(): Promise<Signature[]> {
         return this.httpService.get<Signature[]>("http://localhost:8080/signatures/all").toPromise();
     }
+
+    public async findByCourseId(courseId: string): Promise<Signature[]> {
+        return this.httpService.get<Signature[]>(`http://localhost:8080/signatures/${courseId}`).toPromise();
+    }
 }

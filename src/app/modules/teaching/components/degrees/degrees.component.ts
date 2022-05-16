@@ -12,7 +12,7 @@ import { SignatureService } from 'src/app/services/signature.service';
 export class DegreesComponent implements OnInit {
 
   public degrees: Degree[] = []
-  public signatures: Signature[] = []
+  public signatures: { [key: string]: Signature[] } = {}
 
   constructor(
     private degreeService: DegreeService,
@@ -21,12 +21,15 @@ export class DegreesComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.degrees = await this.degreeService.findAll();
-    console.log(this.degrees);
-    this.signatures = await this.signatureService.findAll();
+    this.getSignatures();
   }
 
-  getDepartmentValue(department: Department) {
-    return Department[department];
+  private getSignatures() {
+      this.degrees.forEach(async(degree) => {
+        this.signatures[degree.name] = await this.signatureService.findByCourseId(degree.id);
+      });
   }
+
+
 
 }

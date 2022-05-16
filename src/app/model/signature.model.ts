@@ -1,6 +1,6 @@
 export interface Signature {
     id: string;
-    degreeId: string;
+    courseId: string;
     code: number;
     name: string;
     plan: number;
@@ -21,6 +21,7 @@ export enum Specialty {
     "COMP" = "COMPUTACIÓN",
     "IC" = "INGENIERÍA DE COMPUTADORES",
     "NONE" = "NONE",
+    "DOCTORATE" = "DOCTORADO",
     "OPT" = "OPTATIVAS GENERALES (PROFUNDIZACIÓN CURRICULAR)"
 }
 
@@ -28,7 +29,14 @@ export enum Department {
     "SYSTEMS" = "INFORMÁTICA Y SISTEMAS",
     "PHILOLOGY" = "FILOLOGÍA MODERNA, TRADUCCIÓN E INTERPRETACIÓN",
     "TELEFORMATION" = "TELEFORMACIÓN",
-    "NONE" = ""
+    "PROCESS" = "INGENIERÍA DE PROCESOS",
+    "CIVIL" = "INGENIERÍA CIVIL",
+    "COMUNICATIONS" = "COMUNICATIONS",
+    "ELECTRONIC" = "INGENIERÍA ELECTRÓNICA Y AUTOMÁTICA",
+    "ECONOMY" = "ECONOMÍA Y DIRECCIÓN DE EMPRESAS",
+    "TELEMATICS" = "INGENIERÍA TELEMÁTICA",
+    "PHYSICAL" = "FÍSICA",
+    "NONE" = "NONE"
 }
 
 export enum SignatureType {

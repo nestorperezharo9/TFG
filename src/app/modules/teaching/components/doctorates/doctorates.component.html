@@ -1,1 +1,36 @@
-<p>doctorates works!</p>
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">Titulaciones de Doctorado</h3><hr class="hr">
+        <div class="ulpgcds-accordion" *ngFor="let doctorate of doctorates">
+            <h3>
+                <button aria-controls="accordion-panel-0" aria-expanded="true">
+                    <span class="ulpgcds-accordion__title"></span>
+                    {{ doctorate.name }}
+                </button>
+            </h3>
+            <div>
+                <div class="ulpgcds-accordion__panel">
+                    <div aria-hidden="false" aria-labelledby="accordion-button-0" class="ulpgcds-accordion__content" role="region">
+
+                        <table class="tablesaw" data-tablesaw-mode="stack">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Denominación</th>
+                                    <th>Plan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let signature of signatures[doctorate.name]">
+                                    <td>{{ signature.code }}</td>
+                                    <td><a href="">{{ signature.name }}</a></td>
+                                    <td>{{ signature.plan }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
