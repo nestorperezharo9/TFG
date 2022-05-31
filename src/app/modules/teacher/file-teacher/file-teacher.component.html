@@ -1,0 +1,118 @@
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">Ficha de Personal</h3><hr class="hr">
+        <div>
+            <table style="border:0 !important;">
+                <tbody>
+                    <tr>
+                        <td colspan="4" style="background-color: #022261;">
+                            <strong style="color: white"> DATOS DEL CONTACTO </strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <strong>APELLIDOS</strong>
+                        </td>
+                        <td colspan="3">
+                            {{ teacher.surnames }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <hr class="hr">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <strong>NOMBRE</strong>
+                        </td>
+                        <td colspan="3">
+                            {{ teacher.name }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <hr class="hr">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <strong>EMAIL</strong>
+                        </td>
+                        <td colspan="3">
+                            {{ teacher.email }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <hr class="hr">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <strong>ÁREA DE CONOCIMIENTO</strong>
+                        </td>
+                        <td colspan="3">
+                            {{ getKnowledgeArea(teacher.knowledge_area) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <hr class="hr">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <strong>TELÉFONO</strong>
+                        </td>
+                        <td colspan="3">
+                            {{ teacher.telephone }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <hr class="hr">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <strong>CATEGORÍA LABORAL</strong>
+                        </td>
+                        <td colspan="3">
+                            {{ getCategory(teacher.category) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <hr class="hr">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <strong>DESPACHO</strong>
+                        </td>
+                        <td colspan="3">
+                            {{ teacher.office }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="titulo1">Asignaturas que imparte</h3><hr class="hr">
+            <table class="tablesaw" data-tablesaw-mode="stack">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Centro</th>
+                        <th>Denominación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,11 @@ export class TeacherService {
         private httpService: HttpClient
     ) {}
 
-    public async findByStaff(staff: string): Promise<Teacher[]> {
-        return this.httpService.get<Teacher[]>(`http://localhost:8080/teachers/${staff}`).toPromise();
+    public async getAllTeachers(): Promise<Teacher[]> {
+        return this.httpService.get<Teacher[]>(`http://localhost:8080/teachers/all`).toPromise();
+    }
+
+    public async findTeacherById(id: string): Promise<Teacher> {
+        return this.httpService.get<Teacher>(`http://localhost:8080/teachers/${id}`).toPromise();
     }
 }

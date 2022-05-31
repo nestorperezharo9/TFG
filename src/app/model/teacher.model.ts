@@ -3,7 +3,7 @@ export interface Teacher {
     name: string;
     surnames: string;
     email: string;
-    knowledgeArea: KnowledgeArea;
+    knowledge_area: KnowledgeArea;
     category: Category;
     telephone: number;
     office: string;

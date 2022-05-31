@@ -17,22 +17,22 @@
         <div class="ulpgcds-header__top__links">
             <ul>
                 <li class="hidden-mobile">
-                    <a href="https://correo.ulpgc.es/" class="ulpgcds-btn ulpgcds-btn--text">
+                    <a href="https://correo.dis.ulpgc.es/roundcubemail/" class="ulpgcds-btn ulpgcds-btn--text" target="_blank">
                         <span class="ulpgcds-btn__icon ulpgcds-icon-envelope" aria-hidden='true'></span>
-                        Correo
+                        CorreoDIS
                     </a>
                 </li>
                 <li class="hidden-mobile">
-                    <a href="https://www.ulpgc.es/" class="ulpgcds-btn ulpgcds-btn--text">
+                    <a href="https://www.dis.ulpgc.es/documentos/" class="ulpgcds-btn ulpgcds-btn--text">
                         <span class="ulpgcds-icon-campus" aria-hidden="true" style="color: orange"></span>
-                        Portal de la ULPGC
+                        Repositorio
                     </a>
                 </li>
                 <li>
                     <a [routerLink]="['/login']"
                         class="ulpgcds-btn ulpgcds-btn--small ulpgcds-btn--primary">
                         <span class="ulpgcds-btn__icon ulpgcds-icon-user" aria-hidden='true'></span>
-                        Login
+                        MiDIS
                     </a>
                 </li>
                 <li>
@@ -46,6 +46,14 @@
     </div><br>
     <nav class="ulpgcds-header__bottom" id="main-menu">
         <ul class="ulpgcds-header__bottom__menu">
+            <li><a [routerLink]="['/departamento']">el Departamento</a>
+                <ul>
+                    <li><a [routerLink]="['/teaching/degrees']">Conócenos</a></li>
+                    <li><a [routerLink]="['/teaching/masters']">Equipo Directivo</a></li>
+                    <li><a [routerLink]="['/teaching/doctorates']">Reglamentos</a></li>
+                </ul>
+                <span></span>
+            </li>
             <li><a class="color_blanco">Docencia</a>
                 <ul>
                     <li><a [routerLink]="['/teaching/degrees']">Grados</a></li>
@@ -54,23 +62,14 @@
                 </ul>
                 <span></span>
             </li>
-            <li><a [routerLink]="['/investigacion']">Investigación</a>
-                <span></span>
-            </li>
             <li><a href="/code/demo/">Noticias</a>
                 <span></span>
             </li>
-            <li><a class="color_blanco">Profesorado</a>
+            <li><a class="color_blanco">Miembros</a>
                 <ul>
-                    <li><a [routerLink]="['/teacher', 'teachers', 'teacher']">Personal Docente</a></li>
-                    <li><a [routerLink]="['/teacher', 'admins']">Personal de Admin. y Servicios</a></li>
-                </ul>
-                <span></span>
-            </li>
-            <li><a href="/code/demo/">Estudiantes</a>
-                <ul>
-                    <li><a href="/code/demo/">Delegados del DIS</a></li>
-                    <li><a href="/code/demo/">Tuna de informática</a></li>
+                    <li><a [routerLink]="['/teacher/teachers']">Personal Docente y PAS</a></li>
+                    <li><a [routerLink]="['/teacher/students']">Delegados del DIS</a></li>
+                    <li><a href="http://www.tunagrancanaria.es/" target="_blank">Tuna de informática</a></li>
                 </ul>
                 <span></span>
             </li>
@@ -82,9 +81,6 @@
                     <li><a href="/code/demo/">Correo Electrónico</a></li>
                     <li><a href="/code/demo/">Normas Lab</a></li>
                 </ul>
-                <span></span>
-            </li>
-            <li><a [routerLink]="['/contact']">Contacto</a>
                 <span></span>
             </li>
         </ul>

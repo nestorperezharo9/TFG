@@ -1,7 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AdminsComponent } from "./admins/admins.component";
 import { TeachersComponent } from "./teachers/teachers.component";
+import { FileTeacherComponent } from "./file-teacher/file-teacher.component";
+import { StudentsComponent } from "./students/students.component";
 
 const routes: Routes = [
     {
@@ -14,12 +15,12 @@ const routes: Routes = [
         component: TeachersComponent
     },
     {
-        path: "admins",
-        component: AdminsComponent
+        path: "students",
+        component: StudentsComponent
     },
     {
-        path: "teachers/:staff",
-        component: TeachersComponent
+        path: "teachers/:id",
+        component: FileTeacherComponent
     }
 ]
 

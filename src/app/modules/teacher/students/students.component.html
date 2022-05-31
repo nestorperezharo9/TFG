@@ -1,0 +1,29 @@
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">Delegados del DIS</h3>
+        <h3 class="titulo2">Delegados</h3><hr class="hr">
+        <div class="ulpgcds-accordion">
+            <div class="ulpgcds-accordion__panel">
+                <div aria-hidden="false" aria-labelledby="accordion-button-0" class="ulpgcds-accordion__content" role="region">
+                    <table class="tablesaw" data-tablesaw-mode="stack">
+                        <thead>
+                            <tr>
+                                <th>Apellidos, Nombre</th>
+                                <th>Teléfono</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let student of students">
+                                    <td>{{ student.surnames }}, {{ student.name }}</td>
+                                    <td>{{ student.telephone }}</td>
+                                    <td>{{ student.email }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

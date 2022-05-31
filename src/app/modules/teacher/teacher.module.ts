@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TeacherRoutingModule } from './teacher-routing.module';
 import { TeachersComponent } from './teachers/teachers.component';
-import { AdminsComponent } from './admins/admins.component';
+import { FileTeacherComponent } from './file-teacher/file-teacher.component';
 
 
 
 @NgModule({
   declarations: [
     TeachersComponent,
-    AdminsComponent
+    FileTeacherComponent,
   ],
   imports: [
     CommonModule,
