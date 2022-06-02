@@ -9,6 +9,7 @@ export interface Teacher {
     office: string;
     signatures: string[];
     staff: Staff;
+    position: Position;
 }
 
 export enum KnowledgeArea {
@@ -28,4 +29,11 @@ export enum Category {
 export enum Staff {
     "TEACHER" = "Personal Docente",
     "ADMIN" = "Personal de Administración y Servicios"
+}
+
+export enum Position {
+    "DIRECTOR" = "Dirección",
+    "SECRETARY" = "Secretaría",
+    "BOSS" = "Jefatura de Servicios",
+    "NONE" = "NONE"
 }

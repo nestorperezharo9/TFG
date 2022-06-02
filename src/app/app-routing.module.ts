@@ -38,6 +38,10 @@ const routes: Routes = [
     {
         path: "teacher",
         loadChildren: () => import("./modules/teacher/teacher.module").then((m) => m.TeacherModule)
+    },
+    {
+        path: "directive",
+        loadChildren: () => import("./modules/directive/directive.module").then((m) => m.DirectiveModule)
     }
 ]
 

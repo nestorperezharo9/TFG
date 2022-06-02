@@ -17,4 +17,8 @@ export class TeacherService {
     public async findTeacherById(id: string): Promise<Teacher> {
         return this.httpService.get<Teacher>(`http://localhost:8080/teachers/${id}`).toPromise();
     }
+
+    public async getAllDirective(): Promise<Teacher[]> {
+        return this.httpService.get<Teacher[]>(`http://localhost:8080/teachers/directive`).toPromise();
+    }
 }

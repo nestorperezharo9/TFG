@@ -30,7 +30,7 @@ export class TeachersComponent implements OnInit {
   private getTeachersByArea() {
     this.teachersByArea = [];
     for (const area in KnowledgeArea) {
-      if(area != 'NONE') {
+      if(area !== 'NONE') {
         const teachers = this.teachers.filter(teacher => teacher.knowledge_area === area)
         this.teachersByArea.push({area: area, teachers: teachers})
       }
@@ -40,7 +40,7 @@ export class TeachersComponent implements OnInit {
   private getTeachersAreaPAS() {
     this.teachersPAS = [];
     for (const area in KnowledgeArea) {
-      if(area == 'NONE') {
+      if(area === 'NONE') {
         const teachers = this.teachers.filter(teacher => teacher.knowledge_area === area)
         this.teachersPAS.push({area: area, teachers: teachers})
       }

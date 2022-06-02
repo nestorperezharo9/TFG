@@ -21,6 +21,4 @@ export class StudentsComponent implements OnInit {
     this.students = await this.studentService.getAllStudents();
   }
 
-
-
 }

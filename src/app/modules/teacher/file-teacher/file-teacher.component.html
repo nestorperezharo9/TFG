@@ -97,22 +97,25 @@
                     </tr>
                 </tbody>
             </table>
-
-            <h3 class="titulo1">Asignaturas que imparte</h3><hr class="hr">
-            <table class="tablesaw" data-tablesaw-mode="stack">
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Centro</th>
-                        <th>Denominación</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                
-                    </tr>
-                </tbody>
-            </table>
+            <div *ngIf="getKnowledgeArea(teacher.knowledge_area) != 'NONE'">
+                <h3 class="titulo1">Asignaturas que imparte</h3><hr class="hr">
+                <table class="tablesaw" data-tablesaw-mode="stack">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Centro</th>
+                            <th>Denominación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let signature of signatures">
+                            <td>{{ signature.code }}</td>
+                            <td>{{ signature.school }}</td>
+                            <td><a [routerLink]="['/teaching','signatures',signature.id]">{{ signature.name }}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

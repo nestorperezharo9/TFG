@@ -9,10 +9,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 import { ContactComponent } from './modules/contact/contact.component';
+import { KnowusComponent } from './knowus/knowus.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactComponent } from './modules/contact/contact.component';
     LoginComponent,
     RegisterComponent,
     UnsubscribeComponent,
-    ContactComponent
+    ContactComponent,
+    KnowusComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
