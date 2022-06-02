@@ -48,7 +48,7 @@
         <ul class="ulpgcds-header__bottom__menu">
             <li><a [routerLink]="['/departamento']">el Departamento</a>
                 <ul>
-                    <li><a [routerLink]="['/teaching/degrees']">Conócenos</a></li>
+                    <li><a [routerLink]="['/knowus']">Conócenos</a></li>
                     <li><a [routerLink]="['/directive/directive']">Equipo Directivo</a></li>
                     <li><a [routerLink]="['/teaching/doctorates']">Reglamentos</a></li>
                 </ul>
@@ -62,7 +62,7 @@
                 </ul>
                 <span></span>
             </li>
-            <li><a href="/code/demo/">Noticias</a>
+            <li><a [routerLink]="['/new/news']">Noticias</a>
                 <span></span>
             </li>
             <li><a class="color_blanco">Miembros</a>
@@ -73,12 +73,12 @@
                 </ul>
                 <span></span>
             </li>
-            <li><a href="/code/demo/">Servicios</a>
+            <li><a class="color_blanco">Servicios</a>
                 <ul>
-                    <li><a href="https://outlook.office.com/mail/">Correo Web</a></li>
-                    <li><a href="/code/demo/">Laboratorios y Aulas Docentes</a></li>
-                    <li><a href="/code/demo/">Seguridad</a></li>
-                    <li><a href="/code/demo/">Normas Lab</a></li>
+                    <li><a href="https://outlook.office.com/mail/" target="_blank">Correo Web</a></li>
+                    <li><a [routerLink]="['/room/rooms']">Laboratorios y Aulas Docentes</a></li>
+                    <li><a [routerLink]="['/security']">Seguridad</a></li>
+                    <li><a href="assets/files/normaslab.pdf" target="_blank">Normas Lab</a></li>
                 </ul>
                 <span></span>
             </li>

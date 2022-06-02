@@ -1,0 +1,47 @@
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">Laboratorios</h3><hr class="hr">
+        <div class="ulpgcds-accordion">
+            <div class="ulpgcds-accordion__panel">
+                <div aria-hidden="false" aria-labelledby="accordion-button-0" class="ulpgcds-accordion__content" role="region">
+                    <table class="tablesaw" data-tablesaw-mode="stack">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let room of roomsLab">
+                                <td><a>{{ room.name }}</a></td>
+                                <td><a href="{{room.location}}" target="_blank"><span class="ulpgcds-icon-add-image"></span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="titulo1">Aulas</h3><hr class="hr">
+        <div class="ulpgcds-accordion">
+            <div class="ulpgcds-accordion__panel">
+                <div aria-hidden="false" aria-labelledby="accordion-button-0" class="ulpgcds-accordion__content" role="region">
+                    <table class="tablesaw" data-tablesaw-mode="stack">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let room of roomsAula">
+                                <td><a>{{ room.name }}</a></td>
+                                <td><a href="{{room.location}}" target="_blank"><span class="ulpgcds-icon-add-image"></span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

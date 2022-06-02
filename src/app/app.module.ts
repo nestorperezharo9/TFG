@@ -14,6 +14,8 @@ import { RegisterComponent } from './register/register.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 import { ContactComponent } from './modules/contact/contact.component';
 import { KnowusComponent } from './knowus/knowus.component';
+import { SecurityComponent } from './security/security.component';
+import { NgxDocViewerModule } from 'ngx-doc-viewer';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { KnowusComponent } from './knowus/knowus.component';
     RegisterComponent,
     UnsubscribeComponent,
     ContactComponent,
-    KnowusComponent
+    KnowusComponent,
+    SecurityComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

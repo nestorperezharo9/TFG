@@ -1,0 +1,73 @@
+.rectangulo {
+    padding: 15px;
+    position: relative;
+    margin: 40px 0px 40px 0px;
+    background-color: #E5EFF5;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 600px;
+
+    .date {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        color: #FFA100
+    }
+
+    .title {
+        max-width: 80%;
+        font-family: "Rubik",Arial,Helvetica,sans-serif;
+        padding: 5px;
+        font-size: 25px;
+        line-height: 45px;
+        color: #0066a1;
+    }
+
+    article {
+        min-height: auto;
+        margin-bottom: 25px;
+        font-style: oblique;
+    }
+}
+
+
+.container1 {
+    margin: 0 auto;
+    margin: 165px 0px 40px 0px;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo1 {
+    margin-top: 20px;
+    margin-right: auto;
+    font-family: "Rubik",Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    padding: 15px;
+    font-size: 35px;
+    line-height: 45px;
+    color: #0066a1;
+}
+
+.titulo2 {
+    font-family: "Rubik",Arial,Helvetica,sans-serif;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 25px;
+    color: #0066a1;
+}
+
+.hr {
+    color: #FFB433;
+    height: 4px;
+}
+
+.hrAzul {
+    color: #05476D;
+    height: 2px;
+}

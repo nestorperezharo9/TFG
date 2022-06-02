@@ -1,8 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { KnowusComponent } from "./knowus/knowus.component";
 import { LoginComponent } from "./login/login.component";
 import { ContactComponent } from "./modules/contact/contact.component";
 import { RegisterComponent } from "./register/register.component";
+import { SecurityComponent } from "./security/security.component";
 import { UnsubscribeComponent } from "./unsubscribe/unsubscribe.component";
 
 const routes: Routes = [
@@ -32,6 +34,14 @@ const routes: Routes = [
         component: ContactComponent
     },
     {
+        path: "knowus",
+        component: KnowusComponent
+    },
+    {
+        path: "security",
+        component: SecurityComponent
+    },
+    {
         path: "teaching",
         loadChildren: () => import("./modules/teaching/teaching.module").then((m) => m.TeachingModule)
     },
@@ -42,6 +52,14 @@ const routes: Routes = [
     {
         path: "directive",
         loadChildren: () => import("./modules/directive/directive.module").then((m) => m.DirectiveModule)
+    },
+    {
+        path: "new",
+        loadChildren: () => import("./modules/new/new.module").then((m) => m.NewModule)
+    },
+    {
+        path: "room",
+        loadChildren: () => import("./modules/room/room.module").then((m) => m.RoomModule)
     }
 ]
 
