@@ -15,7 +15,7 @@ export class RoomService {
         return this.httpService.get<Room[]>("http://localhost:8080/rooms/all").toPromise();
     }
 
-    public async findById(id: string): Promise<Room> {
+    public async findRoomById(id: string): Promise<Room> {
         return this.httpService.get<Room>(`http://localhost:8080/rooms/${id}`).toPromise();
     }
 }

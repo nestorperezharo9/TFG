@@ -13,4 +13,8 @@ export class DegreeService {
     public async findAll(): Promise<Degree[]> {
         return this.httpService.get<Degree[]>("http://localhost:8080/degrees/all").toPromise();
     }
+
+    public async create(degree: any): Promise<void> {
+        return this.httpService.post<void>("http://localhost:8080/degrees/create", degree).toPromise();
+    }
 }

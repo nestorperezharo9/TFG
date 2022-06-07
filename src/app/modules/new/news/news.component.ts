@@ -12,6 +12,8 @@ export class NewsComponent implements OnInit {
 
   public news : New[] = []
 
+  public id : string
+
   constructor(
     private newService: NewService,
     private route: ActivatedRoute
@@ -19,7 +21,6 @@ export class NewsComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.news = await this.newService.getAllNewsAll();
-    console.log(this.news);
   }
 
 }

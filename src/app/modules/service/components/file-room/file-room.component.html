@@ -1,0 +1,28 @@
+<div class="container1">
+    <div class="container">
+        <div *ngIf="room.typeRoom === 'AULA'">
+            <h3 class="titulo1">{{room.name}}</h3><hr class="hr">
+            <div >
+                <img src="{{room.picture}}" alt="Imagen Aula">
+                <br><hr class="hrAzul">
+                <strong>
+                    <p class="text">
+                        {{room.description}}
+                    </p>
+                </strong>
+            </div>
+        </div>
+        <div *ngIf="room.typeRoom === 'LAB'">
+            <h3 class="titulo1">{{room.name}}</h3><hr class="hr">
+            <div >
+                <img src="{{room.picture}}" alt="Imagen Laboratorio">
+                <br><hr class="hrAzul">
+                <strong>
+                    <p class="text">
+                        {{room.description}}
+                    </p>
+                </strong>
+            </div>
+        </div>
+    </div>
+</div>

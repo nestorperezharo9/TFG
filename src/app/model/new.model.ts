@@ -1,8 +1,8 @@
-export interface New {
+export class New {
     id: string;
     title: string;
     description: string;
     file: string;
-    picture: string;
+    image: string;
     date: string;
 }

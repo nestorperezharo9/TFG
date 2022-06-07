@@ -1,0 +1,19 @@
+ul {
+    display: flex;
+    max-width: 100%;
+
+    li {
+        padding: 5px;
+        border-radius: 20px;
+        background-color: rgb(170, 170, 236);
+        color: #fff;
+        font-size: 10px;
+        height: 30px;
+        width: auto;
+    }
+    
+    li:hover {
+        cursor: pointer;
+    }
+}
+

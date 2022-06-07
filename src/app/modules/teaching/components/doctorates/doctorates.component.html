@@ -1,6 +1,10 @@
 <div class="container1">
     <div class="container">
-        <h3 class="titulo1">Titulaciones de Doctorado</h3><hr class="hr">
+        <h3 class="titulo1">Titulaciones de Doctorado</h3>
+        <div class="containerbutton">
+            <a type="button" class="create-button" [routerLink]="['create']">Añadir Doctorado</a>
+        </div>
+        <hr class="hr">
         <div class="ulpgcds-accordion" *ngFor="let doctorate of doctorates">
             <h3>
                 <button aria-controls="accordion-panel-0" aria-expanded="true">

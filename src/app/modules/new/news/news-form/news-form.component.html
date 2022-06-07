@@ -1,0 +1,19 @@
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">Crear Noticia</h3><hr class="hr">
+        <form class="form" (submit)="crearFormulario()" [formGroup]="formGroup">
+            <label for="inputTitulo">Titulo</label>
+            <input type="text" id="inputTitulo" placeholder="Título" formControlName="title"><br><br>
+            <label for="inputDescripcion">Descripcion</label>
+            <input type="text" id="inputDescripcion" placeholder="Descripción" formControlName="description"><br><br>
+            <label for="inputFile">Archivo</label>
+            <input type="file" id="inputFile" formControlName="file"><br><br>
+            <label for="inputImage">Imagen</label>
+            <input type="file" id="inputImage" formControlName="image"><br><br>
+            <label for="inputDate">Date</label>
+            <input type="date" id="inputDate" formControlName="date"><br><br>
+            <button type="submit">Crear</button>
+        </form>
+        <span *ngIf="errorMessage" class="errorMessage"><strong>Todos los campos deben estar completos</strong></span>
+    </div>
+</div>

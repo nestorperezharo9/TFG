@@ -1,6 +1,7 @@
 <div class="container1">
     <div class="container">
-        <h3 class="titulo1">Noticias del Departamento</h3><hr class="hr">
+            <h3 class="titulo1">Noticias del Departamento</h3>
+            <a type="button" class="create-button" [routerLink]="['create']">Crear noticia</a><hr class="hr">
         <div *ngFor="let new of news">
             <div class="rectangulo">
                 <strong class="date">{{ new.date }}</strong>

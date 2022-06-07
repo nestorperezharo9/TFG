@@ -1,0 +1,88 @@
+<header class="ulpgcds-header">
+    <div class="ulpgcds-header__top">
+        <div class="ulpgcds-header__top__logo">
+            <a href="https://www.ulpgc.es" target="_blank">
+                <span>ULPGC</span>
+                <img src="https://daea.ulpgc.es/wp-content/themes/daea-child/images/ulpgc.svg" 
+                alt="Logo de la Universidad de Las Palmas de Gran Canaria" class="logo_standard celr_logo_ulpgc">
+            </a>
+            <a href="/">
+                <span>Departamento de Informática y Sistemas</span>
+                <a [routerLink]="['/home']" title="Departamento de Informática y Sistemas de la Universidad de la ULPGC">
+                    <img src="assets/img/departamento.PNG" 
+                    alt="Logo del Departamento de Informática y Sistemas" class="logo_standard celr_logo_daea">
+                </a>
+            </a>
+        </div>
+        <div class="ulpgcds-header__top__links">
+            <ul>
+                <li class="hidden-mobile">
+                    <a href="https://correo.dis.ulpgc.es/roundcubemail/" class="ulpgcds-btn ulpgcds-btn--text" target="_blank">
+                        <span class="ulpgcds-btn__icon ulpgcds-icon-envelope" aria-hidden='true'></span>
+                        CorreoDIS
+                    </a>
+                </li>
+                <li class="hidden-mobile">
+                    <a href="https://www.dis.ulpgc.es/documentos/" class="ulpgcds-btn ulpgcds-btn--text">
+                        <span class="ulpgcds-icon-campus" aria-hidden="true" style="color: orange"></span>
+                        Repositorio
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['/login']"
+                        class="ulpgcds-btn ulpgcds-btn--small ulpgcds-btn--primary">
+                        <span class="ulpgcds-btn__icon ulpgcds-icon-user" aria-hidden='true'></span>
+                        MiDIS
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-toggle hidden-desktop ulpgcds-btn ulpgcds-btn--small ulpgcds-btn--secondary" href="#">
+                        <span class="ulpgcds-btn__icon ulpgcds-icon-menu" aria-hidden='true'></span>
+                        Menú
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div><br>
+    <nav class="ulpgcds-header__bottom" id="main-menu">
+        <ul class="ulpgcds-header__bottom__menu">
+            <li><a [routerLink]="['/departamento']">el Departamento</a>
+                <ul>
+                    <li><a [routerLink]="['/theDepartment/knowus']">Conócenos</a></li>
+                    <li><a [routerLink]="['/theDepartment/directive']">Equipo Directivo</a></li>
+                    <li><a [routerLink]="['/teaching/doctorates']">Reglamentos</a></li>
+                </ul>
+                <span></span>
+            </li>
+            <li><a class="color_blanco">Docencia</a>
+                <ul>
+                    <li><a [routerLink]="['/teaching/degrees']">Grados</a></li>
+                    <li><a [routerLink]="['/teaching/masters']">Máster</a></li>
+                    <li><a [routerLink]="['/teaching/doctorates']">Doctorados</a></li>
+                </ul>
+                <span></span>
+            </li>
+            <li><a [routerLink]="['/new/news']">Noticias</a>
+                <span></span>
+            </li>
+            <li><a class="color_blanco">Miembros</a>
+                <ul>
+                    <li><a [routerLink]="['/teacher/teachers']">Personal Docente y PAS</a></li>
+                    <li><a [routerLink]="['/teacher/students']">Delegados del DIS</a></li>
+                    <li><a href="http://www.tunagrancanaria.es/" target="_blank">Tuna de informática</a></li>
+                </ul>
+                <span></span>
+            </li>
+            <li><a class="color_blanco">Servicios</a>
+                <ul>
+                    <li><a href="https://outlook.office.com/mail/" target="_blank">Correo Web</a></li>
+                    <li><a [routerLink]="['/service/rooms']">Laboratorios y Aulas Docentes</a></li>
+                    <li><a [routerLink]="['/service/security']">Seguridad</a></li>
+                    <li><a href="assets/files/normaslab.pdf" target="_blank">Normas Lab</a></li>
+                </ul>
+                <span></span>
+            </li>
+        </ul>
+    </nav>
+    
+</header>

@@ -21,4 +21,8 @@ export class TeacherService {
     public async getAllDirective(): Promise<Teacher[]> {
         return this.httpService.get<Teacher[]>(`http://localhost:8080/teachers/directive`).toPromise();
     }
+
+    public async create(teacher: any): Promise<void> {
+        return this.httpService.post<void>("http://localhost:8080/teachers/teacher/create", teacher).toPromise();
+    }
 }

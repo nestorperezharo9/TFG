@@ -1,0 +1,53 @@
+.container1 {
+    margin: 0 auto;
+    margin: 160px 0px 0px 0px;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo1 {
+    font-family: "Rubik",Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    padding: 15px;
+    font-size: 35px;
+    line-height: 45px;
+    color: #0066a1;
+}
+
+.titulo2 {
+    font-family: "Rubik",Arial,Helvetica,sans-serif;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 25px;
+    color: #0066a1;
+}
+
+.columnboton {
+    margin: auto;
+}
+
+.izquierda {
+    text-align: center;
+}
+
+.textB {
+    color:#ffffff; 
+    font-family: Rubik,Arial,Helvetica,sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.hr {
+    color: #FFB433;
+    height: 4px;
+}
+
+.hrAzul {
+    color: #7FB2D0;
+    height: 4px;
+}

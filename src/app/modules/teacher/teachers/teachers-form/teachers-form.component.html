@@ -1,0 +1,52 @@
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">Crear Profesor</h3><hr class="hr">
+        <app-selector-multiple [options]="signatures" (selectedOptions)="selectSignaturesHandler($event)"></app-selector-multiple>
+        <form class="form" (submit)="crearFormulario()" [formGroup]="formGroup">
+            <label for="inputNombre">Nombre</label>
+            <input type="text" id="inputNombre" placeholder="Nombre" formControlName="name"><br><br>
+            <label for="inputApellidos">Apellidos</label>
+            <input type="text" id="inputApellidos" placeholder="Apellidos" formControlName="surnames"><br><br>
+            <label for="inputEmail">Email</label>
+            <input type="email" id="inputEmail" placeholder="Email" formControlName="email"><br><br>
+            <label for="inputKnowledge_area">Área de Conocimiento</label>
+            <select name="inputKnowledge_area" formControlName="knowledge_area">
+                <option value="NONE">Ninguna</option>
+                <option value="ARCHITECTURE">Arquitectura y Tecnología de Computadores</option>
+                <option value="COMP">Ciencia de la Computación e Inteligencia Artificial</option>
+                <option value="IDIOMS">Lenguajes y Sistemas Informáticos</option>
+            </select><br><br>
+            <label for="inputCategory">Categoría</label>
+            <select name="inputCategory" formControlName="category">
+                <option value="PROFESSOR">Catedrático</option>
+                <option value="DOCTOR1">Profesor Doctor</option>
+                <option value="TITULAR">Titular Universidad</option>
+                <option value="TECHNICIAN">Técnico</option>
+            </select><br><br>
+            <label for="inputTelephone">Teléfono</label>
+            <input type="number" id="inputTelephone" placeholder="928998877" formControlName="telephone"><br><br>
+            <label for="inputOffice">Despacho</label>
+            <input type="text" id="inputOffice" placeholder="Despacho" formControlName="office"><br><br>
+            <label for="inputSignatures">Asignaturas</label>
+            <select name="inputSignatures" id="inputSignatures" formControlName="signatures" multiple>
+                <option value="ADMINISTRACIÓN DE SISTEMAS OPERATIVOS">ADMINISTRACIÓN DE SISTEMAS OPERATIVOS</option>
+                <option value="ANÁLISIS DE LA SEGURIDAD EN LOS SISTEMAS DE INFORMACIÓN">ANÁLISIS DE LA SEGURIDAD EN LOS SISTEMAS DE INFORMACIÓN</option>
+                <option value="ANÁLISIS MATEMÁTICO">ANÁLISIS MATEMÁTICO</option>
+            </select><br><br>
+            <label for="inputStaff">Personal</label>
+            <select name="inputStaff" formControlName="staff">
+                <option value="TEACHER">Personal Docente</option>
+                <option value="ADMIN">PAS</option>
+            </select><br><br>
+            <label for="inputPosition">Posición</label>
+            <select name="inputPosition" formControlName="position">
+                <option value="NONE">Ninguno</option>
+                <option value="SECRETARY">Secretaría</option>
+                <option value="BOSS">Jefatura</option>
+                <option value="DIRECTOR">Dirección</option>
+            </select><br><br>
+            <button type="submit">Crear</button>
+        </form>
+        <span *ngIf="errorMessage" class="errorMessage"><strong>Todos los campos deben estar completos</strong></span>
+    </div>
+</div>

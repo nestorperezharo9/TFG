@@ -13,4 +13,8 @@ export class DoctorateService {
     public async findAll(): Promise<Doctorate[]> {
         return this.httpService.get<Doctorate[]>("http://localhost:8080/doctorates/all").toPromise();
     }
+
+    public async create(doctorate: any): Promise<void> {
+        return this.httpService.post<void>("http://localhost:8080/doctorates/create", doctorate).toPromise();
+    }
 }

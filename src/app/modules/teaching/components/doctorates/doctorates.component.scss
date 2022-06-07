@@ -9,6 +9,41 @@
     flex-direction: column;
 }
 
+.containerbutton {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    .titulo1 {
+        margin-top: 20px;
+        margin-right: auto;
+        font-family: "Rubik",Arial,Helvetica,sans-serif;
+        font-weight: 500;
+        padding: 15px;
+        font-size: 35px;
+        line-height: 45px;
+        color: #0066a1;
+    }
+    
+    .create-button {
+        padding: 5px;
+        background-color: #0066a1;
+        color: #fff;
+        border-radius: 5px;
+        align-self: auto;
+    }
+
+    .create-buttonred {
+        padding: 5px;
+        background-color: red;
+        margin-top: 8px;
+        color: #fff;
+        border-radius: 5px;
+        align-self: auto;
+    }
+}
+
 .titulo1 {
     font-family: "Rubik",Arial,Helvetica,sans-serif;
     font-weight: 500;

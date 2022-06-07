@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { NewsFormComponent } from "./news/news-form/news-form.component";
 import { NewsComponent } from "./news/news.component";
 
 
@@ -11,7 +12,11 @@ const routes: Routes = [
     {
         path: "news",
         component: NewsComponent
-    }
+    },
+    {
+        path: "news/create",
+        component: NewsFormComponent
+    },
 ]
 
 @NgModule({

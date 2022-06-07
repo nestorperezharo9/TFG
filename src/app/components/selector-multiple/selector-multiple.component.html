@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <input type="text" [(ngModel)]="query">
+    </div>
+    <div>
+        <ul>
+            <li *ngFor="let option of selectedOptions()" (click)="toggleSelection(option)">
+                {{option.title}}
+            </li>
+        </ul>
+        
+        <ul>
+            <li *ngFor="let option of nonSelectedOptions()" (click)="toggleSelection(option)">
+                {{option.title}}
+            </li>
+        </ul>
+    </div>
+    
+</div>

@@ -72,7 +72,7 @@
 					<div class="columnboton">
                         <div class="izquierda">
                             <div class="ulpgcds-btn ulpgcds-btn--primary">
-                                <a [routerLink]="['/directive/directive']" style="color:#ffffff; font-family: Rubik,Arial,Helvetica,sans-serif;">
+                                <a [routerLink]="['/theDepartment/directive']" style="color:#ffffff; font-family: Rubik,Arial,Helvetica,sans-serif;">
                                     Directiva
                                 </a>
                             </div>
@@ -102,7 +102,7 @@
             <h2 class="textblue">Laboratorios</h2>
             <p>Gestiona la reserva de los laboratorios y observa su disposición.</p>
             <div class="botoninfo">
-                <a href="/laboratorios/">
+                <a [routerLink]="['/lab']">
                     <button class="ulpgcds-btn ulpgcds-btn--secondary">
                         + info
                     </button>
@@ -112,7 +112,7 @@
             <h2 class="textblue">Servicio VPN del DIS</h2>
             <p>Para tener acceso a este servicio, debes solicitarlo al Jefe de Servicio del DIS en caso de ser profesor.</p>
             <div class="botoninfo">
-                <a href="/VPN/">
+                <a [routerLink]="['/vpn']">
                     <button class="ulpgcds-btn ulpgcds-btn--secondary">
                         + info
                     </button>
@@ -122,7 +122,7 @@
             <h2 class="textblue">Documentación</h2>
             <p>Accede a documentación relacionada con el Departamento (tutoriales).</p>
             <div class="botoninfo">
-                <a href="/secretaria/">
+                <a [routerLink]="['/document']">
                     <button class="ulpgcds-btn ulpgcds-btn--secondary">
                         + info
                     </button>

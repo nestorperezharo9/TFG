@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { TeachersComponent } from "./teachers/teachers.component";
 import { FileTeacherComponent } from "./file-teacher/file-teacher.component";
 import { StudentsComponent } from "./students/students.component";
+import { TeachersFormComponent } from "./teachers/teachers-form/teachers-form.component";
 
 const routes: Routes = [
     {
@@ -21,6 +22,10 @@ const routes: Routes = [
     {
         path: "teachers/:id",
         component: FileTeacherComponent
+    },
+    {
+        path: "teachers/teacher/create",
+        component: TeachersFormComponent
     }
 ]
 

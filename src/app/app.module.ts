@@ -2,20 +2,20 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
-import { ContactComponent } from './modules/contact/contact.component';
-import { KnowusComponent } from './knowus/knowus.component';
-import { SecurityComponent } from './security/security.component';
-import { NgxDocViewerModule } from 'ngx-doc-viewer';
+import { ContactComponent } from './contact/contact.component';
+import { VpnComponent } from './vpn/vpn.component';
+import { DocumentComponent } from './document/document.component';
+import { SelectorMultipleComponent } from './components/selector-multiple/selector-multiple.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +26,8 @@ import { NgxDocViewerModule } from 'ngx-doc-viewer';
     RegisterComponent,
     UnsubscribeComponent,
     ContactComponent,
-    KnowusComponent,
-    SecurityComponent
+    VpnComponent,
+    DocumentComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -37,6 +37,7 @@ import { NgxDocViewerModule } from 'ngx-doc-viewer';
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [UserService],

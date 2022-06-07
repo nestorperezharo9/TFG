@@ -1,0 +1,11 @@
+<div class="container1">
+    <div class="container">
+        <h3 class="titulo1">Crear Doctorado</h3><hr class="hr">
+        <form class="form" (submit)="crearFormulario()" [formGroup]="formGroup">
+            <label for="inputNombre">Nombre</label>
+            <input type="text" id="inputNombre" placeholder="Nombre" formControlName="name"><br><br>
+            <button type="submit">Crear</button>
+        </form>
+        <span *ngIf="errorMessage" class="errorMessage"><strong>Todos los campos deben estar completos</strong></span>
+    </div>
+</div>
