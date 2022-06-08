@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NewService } from 'src/app/services/new.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class NewsFormComponent implements OnInit {
   public errorMessage: boolean = false;
 
   constructor(
-    private newsService: NewService
+    private newsService: NewService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -29,8 +31,8 @@ export class NewsFormComponent implements OnInit {
   public crearFormulario() {
     if (this.formGroup.valid) {
       this.errorMessage = false;
-      console.log(this.formGroup.value)
       this.newsService.create(this.formGroup.value);
+      this.router.navigate(['/new', 'news'])
     } else {
       this.errorMessage = true;
     }

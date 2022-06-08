@@ -20,7 +20,6 @@ export class TeachersFormComponent implements OnInit {
   ) { }
 
   async ngOnInit(): Promise<void> {
-    await this.getSignatures();
     this.formGroup = new FormGroup({
       name: new FormControl('', Validators.required),
       surnames: new FormControl('', Validators.required),
@@ -32,7 +31,8 @@ export class TeachersFormComponent implements OnInit {
       signatures: new FormControl([], Validators.required),
       staff: new FormControl(null, Validators.required),
       position: new FormControl(null, Validators.required)
-    })
+    });
+    await this.getSignatures();
   }
 
   public crearFormulario() {
@@ -47,6 +47,11 @@ export class TeachersFormComponent implements OnInit {
 
   public selectSignaturesHandler(event) {
     console.log(event);
+    if (event.length === 0) {
+      this.formGroup.patchValue({signatures: []})
+    } else {
+      this.formGroup.patchValue({signatures: event})
+    }
   }
 
   private async getSignatures() {
@@ -58,7 +63,6 @@ export class TeachersFormComponent implements OnInit {
         title: signature.name
       };
     })
-    console.log(this.signatures)
   }
 
 }

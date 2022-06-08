@@ -1,8 +1,7 @@
 <div class="container1">
     <div class="container">
         <h3 class="titulo1">Crear Profesor</h3><hr class="hr">
-        <app-selector-multiple [options]="signatures" (selectedOptions)="selectSignaturesHandler($event)"></app-selector-multiple>
-        <form class="form" (submit)="crearFormulario()" [formGroup]="formGroup">
+        <form class="form" [formGroup]="formGroup" (submit)="crearFormulario()">
             <label for="inputNombre">Nombre</label>
             <input type="text" id="inputNombre" placeholder="Nombre" formControlName="name"><br><br>
             <label for="inputApellidos">Apellidos</label>
@@ -28,11 +27,10 @@
             <label for="inputOffice">Despacho</label>
             <input type="text" id="inputOffice" placeholder="Despacho" formControlName="office"><br><br>
             <label for="inputSignatures">Asignaturas</label>
-            <select name="inputSignatures" id="inputSignatures" formControlName="signatures" multiple>
-                <option value="ADMINISTRACIÓN DE SISTEMAS OPERATIVOS">ADMINISTRACIÓN DE SISTEMAS OPERATIVOS</option>
-                <option value="ANÁLISIS DE LA SEGURIDAD EN LOS SISTEMAS DE INFORMACIÓN">ANÁLISIS DE LA SEGURIDAD EN LOS SISTEMAS DE INFORMACIÓN</option>
-                <option value="ANÁLISIS MATEMÁTICO">ANÁLISIS MATEMÁTICO</option>
-            </select><br><br>
+            <app-selector-multiple [options]="signatures" ngDefaultControl (selectedOptions)="selectSignaturesHandler($event)" name="inputSignatures" id="inputSignatures" 
+            formControlName="signatures">
+
+            </app-selector-multiple><br><br>
             <label for="inputStaff">Personal</label>
             <select name="inputStaff" formControlName="staff">
                 <option value="TEACHER">Personal Docente</option>

@@ -15,7 +15,6 @@ import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 import { ContactComponent } from './contact/contact.component';
 import { VpnComponent } from './vpn/vpn.component';
 import { DocumentComponent } from './document/document.component';
-import { SelectorMultipleComponent } from './components/selector-multiple/selector-multiple.component';
 
 @NgModule({
   declarations: [

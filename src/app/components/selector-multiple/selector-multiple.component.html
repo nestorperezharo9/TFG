@@ -1,19 +1,24 @@
 <div>
     <div>
-        <input type="text" [(ngModel)]="query">
+        <input type="text" placeholder="En MAYUS" [(ngModel)]="query">
     </div>
     <div>
-        <ul>
-            <li *ngFor="let option of selectedOptions()" (click)="toggleSelection(option)">
-                {{option.title}}
-            </li>
-        </ul>
-        
-        <ul>
-            <li *ngFor="let option of nonSelectedOptions()" (click)="toggleSelection(option)">
-                {{option.title}}
-            </li>
-        </ul>
+        <div class="contenedor">
+            <h3 class="title">Asignaturas Seleccionadas</h3>
+            <ul>
+                <li class="selected" *ngFor="let option of selectedOptions()" (click)="toggleSelection(option)">
+                    {{option.title}}
+                </li>
+            </ul>
+        </div>
+        <div class="contenedor">
+            <h3 class="title">Asignaturas</h3>
+            <ul>
+                <li *ngFor="let option of nonSelectedOptions()" (click)="toggleSelection(option)">
+                    {{option.title}}
+                </li>
+            </ul>
+        </div>
     </div>
     
 </div>
