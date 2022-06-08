@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { KnowledgeArea, Teacher } from 'src/app/model/teacher.model';
 import { TeacherService } from 'src/app/services/teacher.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-teachers',
@@ -12,16 +13,20 @@ export class TeachersComponent implements OnInit {
 
   public teachers: Teacher[] = []
   public staff: string
+  public isAdmin: boolean
 
   public teachersByArea: Object[] = [];
   public teachersPAS: Object[] = [];
 
   constructor(
     private teacherService: TeacherService,
+    private userService: UserService,
     private route: ActivatedRoute
   ) { }
 
   async ngOnInit(): Promise<void> {
+    const user = this.userService.actualUser.getValue();
+    this.isAdmin = this.userService.isAdmin(user);
     this.teachers = await this.teacherService.getAllTeachers();
     this.getTeachersByArea();
     this.getTeachersAreaPAS();

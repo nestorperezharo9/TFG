@@ -36,4 +36,11 @@ export class UserService {
         }
         return false;
     }
+
+    public isUser(user: User) {
+        if (user) {
+            return user.roles.includes(Rol.USER);
+        }
+        return false;
+    }
 }

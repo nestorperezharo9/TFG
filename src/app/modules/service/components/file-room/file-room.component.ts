@@ -29,7 +29,6 @@ export class FileRoomComponent implements OnInit {
 
   private async getRoomById() {
     this.room = await this.roomService.findRoomById(this.id);
-    console.log(this.room)
   }
 
 }

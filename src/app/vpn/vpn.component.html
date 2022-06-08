@@ -28,7 +28,7 @@
             a información restringida del Departamento, así como a determinadas herramientas on-line de gestión de procesos administrativos.
         </p>
 
-        <div class="ulpgcds-btn ulpgcds-btn--primary">
+        <div class="ulpgcds-btn ulpgcds-btn--primary" *ngIf="isUser === true">
             <span class="ulpgcds-icon-file"></span>
             <a href="assets/files/ovpn.ovpn" target="_blank" style="color:white;">Descarga aquí tu fichero .ovpn para el acceso a la VPN del DIS</a>
         </div><br> 

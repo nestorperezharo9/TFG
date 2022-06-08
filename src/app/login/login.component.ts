@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   public form: FormGroup;
 
   private user: User;
+  public errorMessage: boolean = false;
 
   constructor(
     private userService: UserService,
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
 
   public async login(): Promise<void> {
     if (this.form.valid) {
+      this.errorMessage = false;
       const user = this.form.value as User;
       this.user = await this.userService.login(this.form.value);
       if (user) {
@@ -36,6 +38,8 @@ export class LoginComponent implements OnInit {
         this.userService.setUserLogged(this.user);
         this.router.navigate(['/']);
       }
+    } else {
+      this.errorMessage = true;
     }
   }
 

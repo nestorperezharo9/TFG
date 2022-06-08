@@ -1,7 +1,7 @@
 <div class="container1">
     <div class="container">
         <h3 class="titulo1">Titulaciones de Máster</h3>
-        <div class="containerbutton">
+        <div class="containerbutton" *ngIf="isAdmin === true">
             <a type="button" class="create-button" [routerLink]="['create']">Añadir Máster</a>
         </div>
         <hr class="hr">

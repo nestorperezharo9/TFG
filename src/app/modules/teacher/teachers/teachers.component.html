@@ -2,9 +2,10 @@
     <div class="container">
         <h3 class="titulo1">Miembros del Departamento</h3>
         <h3 class="titulo2">Personal Docente</h3>
-        <div class="containerbutton">
-            <a type="button" class="create-button" [routerLink]="['teacher/create']">Añadir Profesor</a><hr class="hr">
+        <div class="containerbutton" *ngIf="isAdmin === true">
+            <a type="button" class="create-button" [routerLink]="['teacher/create']">Añadir Profesor</a>
         </div>
+        <hr class="hr">
         <div class="ulpgcds-accordion" *ngFor="let teacher of teachersByArea">
             <h3>
                 <h4>Área de conocimiento:</h4>

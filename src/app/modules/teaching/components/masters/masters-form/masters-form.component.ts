@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MasterService } from 'src/app/services/master.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class MastersFormComponent implements OnInit {
   public errorMessage: boolean = false;
 
   constructor(
-    private masterService: MasterService
+    private masterService: MasterService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -25,8 +27,8 @@ export class MastersFormComponent implements OnInit {
   public crearFormulario() {
     if (this.formGroup.valid) {
       this.errorMessage = false;
-      console.log(this.formGroup.value)
       this.masterService.create(this.formGroup.value);
+      this.router.navigate(['teaching', 'masters']);
     } else {
       this.errorMessage = true;
     }

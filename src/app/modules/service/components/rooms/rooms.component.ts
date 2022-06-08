@@ -28,7 +28,6 @@ export class RoomsComponent implements OnInit {
   private getRooms() {
     this.roomsAula = this.rooms.filter(room => room.typeRoom === TypeRoom.AULA);
     this.roomsLab = this.rooms.filter(room => room.typeRoom === TypeRoom.LAB);
-    console.log(this.rooms);
   }
 
 }

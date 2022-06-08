@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class RegisterComponent implements OnInit {
   public form: FormGroup;
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -26,6 +28,7 @@ export class RegisterComponent implements OnInit {
   public async register(): Promise<void> {
     if (this.form.valid) {
       await this.userService.register(this.form.value);
+      this.router.navigate(['login']);
     }
   }
 

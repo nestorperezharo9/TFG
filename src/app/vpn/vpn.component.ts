@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-vpn',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VpnComponent implements OnInit {
 
-  constructor() { }
+  public isUser: boolean
 
-  ngOnInit(): void {
+  constructor(
+    private userService: UserService
+  ) { }
+
+  async ngOnInit(): Promise<void> {
+    const user = this.userService.actualUser.getValue();
+    this.isUser = this.userService.isUser(user);
   }
 
 }

@@ -32,7 +32,7 @@ export class NewsFormComponent implements OnInit {
     if (this.formGroup.valid) {
       this.errorMessage = false;
       this.newsService.create(this.formGroup.value);
-      this.router.navigate(['/new', 'news'])
+      this.router.navigate(['/new', 'news']);
     } else {
       this.errorMessage = true;
     }

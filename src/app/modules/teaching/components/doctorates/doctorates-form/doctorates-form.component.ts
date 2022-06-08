@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DoctorateService } from 'src/app/services/doctorate.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class DoctoratesFormComponent implements OnInit {
   public errorMessage: boolean = false;
 
   constructor(
-    private doctorateService: DoctorateService
+    private doctorateService: DoctorateService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -25,8 +27,8 @@ export class DoctoratesFormComponent implements OnInit {
   public crearFormulario() {
     if (this.formGroup.valid) {
       this.errorMessage = false;
-      console.log(this.formGroup.value)
       this.doctorateService.create(this.formGroup.value);
+      this.router.navigate(['teaching', 'doctorates']);
     } else {
       this.errorMessage = true;
     }

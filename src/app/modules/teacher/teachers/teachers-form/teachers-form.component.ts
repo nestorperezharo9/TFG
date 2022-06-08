@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SignatureService } from 'src/app/services/signature.service';
 import { TeacherService } from 'src/app/services/teacher.service';
 
@@ -16,7 +17,8 @@ export class TeachersFormComponent implements OnInit {
 
   constructor(
     private teacherService: TeacherService,
-    private signatureService: SignatureService
+    private signatureService: SignatureService,
+    private router: Router
   ) { }
 
   async ngOnInit(): Promise<void> {
@@ -27,8 +29,8 @@ export class TeachersFormComponent implements OnInit {
       knowledge_area: new FormControl(null, Validators.required),
       category: new FormControl(null, Validators.required),
       telephone: new FormControl(null, Validators.required),
-      office: new FormControl('', Validators.required),
-      signatures: new FormControl([], Validators.required),
+      office: new FormControl(''),
+      signatures: new FormControl([]),
       staff: new FormControl(null, Validators.required),
       position: new FormControl(null, Validators.required)
     });
@@ -38,8 +40,8 @@ export class TeachersFormComponent implements OnInit {
   public crearFormulario() {
     if (this.formGroup.valid) {
       this.errorMessage = false;
-      console.log(this.formGroup.value)
       this.teacherService.create(this.formGroup.value);
+      this.router.navigate(['/teacher', 'teachers']);
     } else {
       this.errorMessage = true;
     }

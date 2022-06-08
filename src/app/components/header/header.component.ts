@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public isUser: boolean
+  public isAdmin: boolean
 
-  ngOnInit(): void {
+  constructor(
+    private userService: UserService
+  ) { }
+
+  async ngOnInit(): Promise<void> {
+    const user = this.userService.actualUser.getValue();
+    this.isUser = this.userService.isUser(user);
+    const admin = this.userService.actualUser.getValue();
+    this.isAdmin = this.userService.isAdmin(admin);
   }
 
 }
