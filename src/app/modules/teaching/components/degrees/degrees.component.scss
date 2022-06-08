@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    display: inline-block;
     
     .titulo1 {
         margin-top: 20px;
@@ -27,11 +28,17 @@
     }
     
     .create-button {
+        text-align: center !important; 
         padding: 5px;
         background-color: #0066a1;
         color: #fff;
         border-radius: 5px;
         align-self: auto;
+        margin-right: 10px;
+    }
+
+    .create-button:hover {
+       background-color: #FFA100; 
     }
 
     .create-buttonred {

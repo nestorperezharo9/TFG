@@ -3,6 +3,7 @@
         <h3 class="titulo1">Titulaciones de Grado</h3>
         <div class="containerbutton" *ngIf="isAdmin === true">
             <a type="button" class="create-button" [routerLink]="['create']">Añadir Grado</a>
+            <a type="button" class="create-button" [routerLink]="['signature/create']">Añadir Asignatura</a>
         </div>
         <hr class="hr">
         <div class="ulpgcds-accordion" *ngFor="let degree of degrees">

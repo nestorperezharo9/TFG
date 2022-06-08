@@ -9,6 +9,9 @@ import { DegreesFormComponent } from './components/degrees/degrees-form/degrees-
 import { DoctoratesFormComponent } from './components/doctorates/doctorates-form/doctorates-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MastersFormComponent } from './components/masters/masters-form/masters-form.component';
+import { SignatureDegreeFormComponent } from './components/degrees/signature-degree-form/signature-degree-form.component';
+import { SignatureDoctorateFormComponent } from './components/doctorates/signature-doctorate-form/signature-doctorate-form.component';
+import { SignatureMasterFormComponent } from './components/masters/signature-master-form/signature-master-form.component';
 
 
 
@@ -20,7 +23,10 @@ import { MastersFormComponent } from './components/masters/masters-form/masters-
     SignaturesComponent,
     DegreesFormComponent,
     DoctoratesFormComponent,
-    MastersFormComponent
+    MastersFormComponent,
+    SignatureDegreeFormComponent,
+    SignatureDoctorateFormComponent,
+    SignatureMasterFormComponent
   ],
   imports: [
     CommonModule,

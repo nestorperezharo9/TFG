@@ -22,4 +22,8 @@ export class SignatureService {
     public async findById(id: string): Promise<Signature> {
         return this.httpService.get<Signature>(`http://localhost:8080/signatures/${id}`).toPromise();
     }
+
+    public async create(signature: any): Promise<void> {
+        return this.httpService.post<void>("http://localhost:8080/degrees/signature/create", signature).toPromise();
+    }
 }
