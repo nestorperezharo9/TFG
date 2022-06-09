@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   public form: FormGroup;
 
-  private user: User;
+  private user: User = {identifier: '', password: '', name:'', roles: []};
   public errorMessage: boolean = false;
 
   constructor(
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       this.errorMessage = false;
       const user = this.form.value as User;
       this.user = await this.userService.login(this.form.value);
-      if (user) {
+      if (this.user) {
         this.user.password = '';
         this.userService.setUserLogged(this.user);
         this.router.navigate(['/']);

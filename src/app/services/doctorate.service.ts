@@ -17,4 +17,8 @@ export class DoctorateService {
     public async create(doctorate: any): Promise<void> {
         return this.httpService.post<void>("http://localhost:8080/doctorates/create", doctorate).toPromise();
     }
+
+    public async delete(id: string): Promise<void> {
+        return this.httpService.get<void>(`http://localhost:8080/doctorates/delete/${id}`).toPromise();
+    }
 }

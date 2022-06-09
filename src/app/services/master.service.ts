@@ -17,4 +17,8 @@ export class MasterService {
     public async create(master: any): Promise<void> {
         return this.httpService.post<void>("http://localhost:8080/masters/create", master).toPromise();
     }
+
+    public async delete(id: string): Promise<void> {
+        return this.httpService.get<void>(`http://localhost:8080/masters/delete/${id}`).toPromise();
+    }
 }

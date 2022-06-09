@@ -29,6 +29,12 @@ export class DegreesComponent implements OnInit {
     this.getSignatures();
   }
 
+  public deleteDegree(id: string) {
+    this.degreeService.delete(id).then(() => {
+      this.degrees = this.degrees.filter(item => item.id !== id);
+    });
+  }
+
   private getSignatures() {
       this.degrees.forEach(async(degree) => {
         this.signatures[degree.name] = await this.signatureService.findByCourseId(degree.id);

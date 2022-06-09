@@ -1,0 +1,45 @@
+
+body {
+    background: #74ebd5;
+    background: -webkit-linear-gradient(to bottom, #74ebd5, #acb6e5);
+    background: linear-gradient(to bottom, #74ebd5, #acb6e5);
+    font-size: 16px;
+    line-height: 1.2;
+    color: #888;
+}
+
+.pagewrap {
+    max-width: 100%; 
+    background-color: #3385B4;;
+    height: 100vh; 
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center;
+
+    .container {
+        margin: 0 auto;
+        width: 600px;
+        height: 400px;
+        background-color: #E5EFF5;
+
+        h1 {
+            text-align: center;
+            color: #04591C;
+            text-decoration: underline;
+        }
+    
+        button {
+            text-align: center;
+            padding: 3px;
+            background-color: #0066a1;
+            color: #fff;
+            border-radius: 5px;
+            margin-right: 6px;
+        }
+        
+        button:hover {
+            background-color: #FFA100; 
+        }
+    }
+    
+}

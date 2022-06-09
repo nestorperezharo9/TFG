@@ -117,5 +117,10 @@
                 </table>
             </div>
         </div>
+        <div *ngIf="isAdmin === true">
+            <button type="button" class="create-buttonred" (click)="deleteTeacher()" [routerLink]="['/teacher','teachers']">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
+        </div>
     </div>
 </div>

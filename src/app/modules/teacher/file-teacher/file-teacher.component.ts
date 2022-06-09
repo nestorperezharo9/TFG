@@ -4,6 +4,7 @@ import { Signature } from 'src/app/model/signature.model';
 import { KnowledgeArea, Category, Teacher } from 'src/app/model/teacher.model';
 import { SignatureService } from 'src/app/services/signature.service';
 import { TeacherService } from 'src/app/services/teacher.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-file-teacher',
@@ -14,20 +15,27 @@ export class FileTeacherComponent implements OnInit {
 
   public teacher: Teacher
   public signatures: Signature[] = [];
-  
   private id: string
+  public isAdmin: boolean
 
   constructor(
     private teacherService: TeacherService,
     private signatureService: SignatureService,
+    private userService: UserService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    const user = this.userService.actualUser.getValue();
+    this.isAdmin = this.userService.isAdmin(user);
     this.route.params.subscribe(data => {
       this.id = data['id'];
       this.getTeacherById();
     });
+  }
+
+  public deleteTeacher() {
+    this.teacherService.delete(this.teacher.id);
   }
 
   private async getTeacherById() {

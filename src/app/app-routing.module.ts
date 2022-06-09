@@ -6,6 +6,7 @@ import { RegisterComponent } from "./register/register.component";
 import { UnsubscribeComponent } from "./unsubscribe/unsubscribe.component";
 import { VpnComponent } from "./vpn/vpn.component";
 import { DocumentComponent } from "./document/document.component";
+import { LogoutComponent } from "./logout/logout.component";
 
 const routes: Routes = [
     {
@@ -28,6 +29,10 @@ const routes: Routes = [
     {
         path: "unsubscribe",
         component: UnsubscribeComponent
+    },
+    {
+        path: "logout",
+        component: LogoutComponent
     },
     {
         path: "contact",

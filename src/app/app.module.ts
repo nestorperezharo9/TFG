@@ -15,6 +15,7 @@ import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 import { ContactComponent } from './contact/contact.component';
 import { VpnComponent } from './vpn/vpn.component';
 import { DocumentComponent } from './document/document.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DocumentComponent } from './document/document.component';
     UnsubscribeComponent,
     ContactComponent,
     VpnComponent,
-    DocumentComponent
+    DocumentComponent,
+    LogoutComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

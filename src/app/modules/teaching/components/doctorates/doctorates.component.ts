@@ -29,6 +29,12 @@ export class DoctoratesComponent implements OnInit {
     this.getSignatures();
   }
 
+  public deleteDoctorate(id: string) {
+    this.doctorateService.delete(id).then(() => {
+      this.doctorates = this.doctorates.filter(item => item.id !== id);
+    });
+  }
+
   private getSignatures() {
     this.doctorates.forEach(async(doctorate) => {
       this.signatures[doctorate.name] = await this.signatureService.findByCourseId(doctorate.id);

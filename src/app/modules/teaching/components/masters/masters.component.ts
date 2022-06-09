@@ -29,6 +29,12 @@ export class MastersComponent implements OnInit {
     this.getSignatures();
   }
 
+  public deleteMaster(id: string) {
+    this.masterService.delete(id).then(() => {
+      this.masters = this.masters.filter(item => item.id !== id);
+    });
+  }
+
   private getSignatures() {
     this.masters.forEach(async(master) => {
       this.signatures[master.name] = await this.signatureService.findByCourseId(master.id);

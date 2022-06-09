@@ -47,8 +47,7 @@ export class SignatureDoctorateFormComponent implements OnInit {
   public crearFormulario() {
     if (this.formGroup.valid) {
       this.errorMessage = false;
-      this.signatureService.create(this.formGroup.value);
-      console.log(this.formGroup.value)
+      this.signatureService.createSignatureDoctorate(this.formGroup.value);
       this.router.navigate(['teaching', 'doctorates']);
     } else {
       this.errorMessage = true;

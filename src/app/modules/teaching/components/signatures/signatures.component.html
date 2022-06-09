@@ -55,5 +55,10 @@
                 </tbody>
             </table>
         </div>
+        <div *ngIf="isAdmin === true">
+            <button type="button" class="create-buttonred" (click)="deleteSignature()">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
+        </div>
     </div>
 </div>

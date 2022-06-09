@@ -32,6 +32,12 @@ export class TeachersComponent implements OnInit {
     this.getTeachersAreaPAS();
   }
 
+  public deleteTeacher(id: string) {
+    this.teacherService.delete(id).then(() => {
+      this.teachers = this.teachers.filter(item => item.id !== id);
+    });
+  }
+
   private getTeachersByArea() {
     this.teachersByArea = [];
     for (const area in KnowledgeArea) {

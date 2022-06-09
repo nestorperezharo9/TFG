@@ -9,6 +9,21 @@
     flex-direction: column;
 }
 
+.create-buttonred {
+    padding: 5px;
+    background-color: red;
+    margin-top: 14px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.create-buttonred:hover {
+    background-color: #f36161;
+}
+
 .titulo1 {
     margin-top: 20px;
     font-family: "Rubik",Arial,Helvetica,sans-serif;

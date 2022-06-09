@@ -52,13 +52,20 @@
             background-color: #FFD07F;
             color: #3385B4;
         }
-         
+        
+        input::placeholder {
+            color:#eeb2b2;
+            font-style: italic;
+        }
+        
         button {
             padding: 8px;
             background-color: #0066a1;
             color: #fff;
             border-radius: 5px;
-            text-align: center;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
         }
 
         button:hover {

@@ -47,8 +47,7 @@ export class SignatureMasterFormComponent implements OnInit {
   public crearFormulario() {
     if (this.formGroup.valid) {
       this.errorMessage = false;
-      this.signatureService.create(this.formGroup.value);
-      console.log(this.formGroup.value)
+      this.signatureService.createSignatureMaster(this.formGroup.value);
       this.router.navigate(['teaching', 'masters']);
     } else {
       this.errorMessage = true;

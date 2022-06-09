@@ -43,16 +43,20 @@
         background-color: #FFA100; 
      }
 
-    .create-buttonred {
-        padding: 5px;
-        background-color: red;
-        margin-top: 8px;
-        color: #fff;
-        border-radius: 5px;
-        align-self: auto;
-    }
 }
 
+.create-buttonred {
+    padding: 5px;
+    width: auto;
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.create-buttonred:hover {
+    background-color: #f36161;
+}
+    
 .titulo2 {
     font-family: "Rubik",Arial,Helvetica,sans-serif;
     padding: 15px;

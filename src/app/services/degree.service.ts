@@ -17,4 +17,8 @@ export class DegreeService {
     public async create(degree: any): Promise<void> {
         return this.httpService.post<void>("http://localhost:8080/degrees/create", degree).toPromise();
     }
+
+    public async delete(id: string): Promise<void> {
+        return this.httpService.get<void>(`http://localhost:8080/degrees/delete/${id}`).toPromise();
+    }
 }

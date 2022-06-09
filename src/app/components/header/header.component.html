@@ -28,6 +28,18 @@
                         Repositorio
                     </a>
                 </li>
+                <li class="hidden-mobile" *ngIf="isAdmin === true">
+                    <a [routerLink]="['/register']" class="ulpgcds-btn ulpgcds-btn--text">
+                        <span class="ulpgcds-icon-add-user" aria-hidden="true" style="color: orange"></span>
+                        Alta Usuarios
+                    </a>
+                </li>
+                <li class="hidden-mobile" *ngIf="isAdmin === true">
+                    <a [routerLink]="['/unsubscribe']" class="ulpgcds-btn ulpgcds-btn--text">
+                        <span class="ulpgcds-icon-close" aria-hidden="true" style="color: orange"></span>
+                        Baja Usuarios
+                    </a>
+                </li>
                 <li *ngIf="isUser === false">
                     <a [routerLink]="['/login']"
                     class="ulpgcds-btn ulpgcds-btn--small ulpgcds-btn--primary">
@@ -36,17 +48,9 @@
                     </a>
                 </li>
                 <li *ngIf="isUser === true">
-                    <a [routerLink]="['/unsubscribe']"
-                    class="ulpgcds-btn ulpgcds-btn--small ulpgcds-btn--primary">
-                    <span class="ulpgcds-btn__icon ulpgcds-icon-user" aria-hidden='true'></span>
-                    <span class="ico_desconectar"></span>
-                    </a>
-                </li>
-                <li *ngIf="isAdmin === true">
-                    <a [routerLink]="['/register']"
-                    class="ulpgcds-btn ulpgcds-btn--small ulpgcds-btn--primary">
-                    <span class="ulpgcds-btn__icon ulpgcds-icon-add-user" aria-hidden='true'></span>
-                    Registro
+                    <a [routerLink]="['/logout']"
+                    class="ulpgcds-btn ulpgcds-btn--icon" (click)="logout();">
+                    <span class="fa fa-power-off" style="color: white"></span>
                     </a>
                 </li>
                 <li>

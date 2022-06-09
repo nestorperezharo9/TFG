@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/model/user.model';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -10,16 +11,28 @@ export class HeaderComponent implements OnInit {
 
   public isUser: boolean
   public isAdmin: boolean
+  public user: User;
 
   constructor(
     private userService: UserService
   ) { }
 
-  async ngOnInit(): Promise<void> {
-    const user = this.userService.actualUser.getValue();
-    this.isUser = this.userService.isUser(user);
-    const admin = this.userService.actualUser.getValue();
-    this.isAdmin = this.userService.isAdmin(admin);
+  ngOnInit(): void {
+    this.userService.actualUser.subscribe(data => {
+      if (data) {
+        this.user = data;
+        this.isUser = this.userService.isUser(this.user);
+        this.isAdmin = this.userService.isAdmin(this.user);
+      } else {
+        this.user = null;
+        this.isUser = false;
+        this.isAdmin = false;
+      }
+    }); 
+  }
+
+  public async logout(): Promise<void> {
+    this.userService.setUserLogged(null);
   }
 
 }

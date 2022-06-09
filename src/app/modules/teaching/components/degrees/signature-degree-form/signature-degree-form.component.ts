@@ -47,8 +47,7 @@ export class SignatureDegreeFormComponent implements OnInit {
   public crearFormulario() {
     if (this.formGroup.valid) {
       this.errorMessage = false;
-      this.signatureService.create(this.formGroup.value);
-      console.log(this.formGroup.value)
+      this.signatureService.createSignatureDegree(this.formGroup.value);
       this.router.navigate(['teaching', 'degrees']);
     } else {
       this.errorMessage = true;

@@ -13,7 +13,7 @@ export class NewsComponent implements OnInit {
 
   public news : New[] = []
 
-  public id : string
+  //public id : string
   public isAdmin: boolean
 
   constructor(
@@ -26,6 +26,12 @@ export class NewsComponent implements OnInit {
     const user = this.userService.actualUser.getValue();
     this.isAdmin = this.userService.isAdmin(user);
     this.news = await this.newService.getAllNewsAll();
+  }
+
+  public deleteNew(id: string) {
+    this.newService.delete(id).then(() => {
+      this.news = this.news.filter(item => item.id !== id);
+    });
   }
 
 }

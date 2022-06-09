@@ -48,7 +48,6 @@ export class TeachersFormComponent implements OnInit {
   }
 
   public selectSignaturesHandler(event) {
-    console.log(event);
     if (event.length === 0) {
       this.formGroup.patchValue({signatures: []})
     } else {

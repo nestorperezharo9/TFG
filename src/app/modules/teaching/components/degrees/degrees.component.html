@@ -13,10 +13,14 @@
                     {{ degree.name }}
                 </button>
             </h3>
+            <div class="containerDelete" *ngIf="isAdmin === true">
+                <button type="button" class="create-buttonred" (click)="deleteDegree(degree.id)">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+            </div>
             <div>
                 <div class="ulpgcds-accordion__panel">
                     <div aria-hidden="false" aria-labelledby="accordion-button-0" class="ulpgcds-accordion__content" role="region">
-
                         <table class="tablesaw" data-tablesaw-mode="stack">
                             <thead>
                                 <tr>
@@ -28,7 +32,7 @@
                             <tbody>
                                 <tr *ngFor="let signature of signatures[degree.name]">
                                     <td>{{ signature.code }}</td>
-                                    <td><a [routerLink]="['/teaching','signatures',signature.id]">{{ signature.name }}</a></td>
+                                    <td><a [routerLink]="['/teaching','signatures',signature.id]" [state]="{type: 'degree'}">{{ signature.name }}</a></td>
                                     <td>{{ signature.plan }}</td>
                                 </tr>
                             </tbody>
