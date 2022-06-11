@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
         this.user.password = '';
         this.userService.setUserLogged(this.user);
         this.router.navigate(['/']);
+      } else {
+        this.errorMessage = true;
       }
     } else {
       this.errorMessage = true;

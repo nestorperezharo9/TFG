@@ -1,5 +1,7 @@
 <div class="pagewrap">
     <form class="form" [formGroup]="form" (ngSubmit)="register()">
+      <span *ngIf="errorMessage" class="errorMessage"><strong>Campos erróneos, por favor, pruébelo de nuevo.</strong></span>
+      <span *ngIf="aciertMessage" class="aciertMessage"><strong>Correcto! Has dado de Alta a un nuevo usuario.</strong></span>
         <h3 class="title">Dar de ALTA en MIDIS</h3>
         <div class="container">
           <input class="container__input" type="text" formControlName="name" placeholder="Nombre Completo">

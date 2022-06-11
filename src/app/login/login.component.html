@@ -1,5 +1,6 @@
 <div class="pagewrap">
     <form class="form" [formGroup]="form" (ngSubmit)="login()">
+      <span *ngIf="errorMessage" class="errorMessage"><strong>Campos erróneos, por favor, pruébelo de nuevo.</strong></span>
       <h3 class="title">Acceder a MiDIS</h3>
       <div class="container">
         <input class="container__input" type="text" formControlName="identifier" placeholder="12345678X">
@@ -11,5 +12,6 @@
       </div>
       <button class="form__submit" type="submit">Iniciar Sesión</button>
     </form>
-    <span *ngIf="errorMessage" class="errorMessage"><strong>Campos erróneos, por favor, pruébelo de nuevo.</strong></span>
+    <div class="containerError">
+    </div>
 </div>

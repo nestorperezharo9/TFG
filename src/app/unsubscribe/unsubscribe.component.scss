@@ -17,6 +17,22 @@ body {
     align-items: center;
 }
 
+.errorMessage {
+  font-family: "Rubik",Arial,Helvetica,sans-serif;
+  padding: 15px;
+  margin: auto;
+  margin-bottom: 10px;
+  color: #CB2E2D;
+}
+
+.aciertMessage {
+  font-family: "Rubik",Arial,Helvetica,sans-serif;
+  padding: 15px;
+  margin: auto;
+  margin-bottom: 10px;
+  color: #377B33;
+}
+
 .logo {
     width: 130px;
     height: 90px;

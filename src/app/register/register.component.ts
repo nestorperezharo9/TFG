@@ -11,6 +11,8 @@ import { UserService } from '../services/user.service';
 export class RegisterComponent implements OnInit {
 
   public form: FormGroup;
+  public errorMessage: boolean = false;
+  public aciertMessage: boolean = false;
 
   constructor(
     private userService: UserService,
@@ -27,8 +29,12 @@ export class RegisterComponent implements OnInit {
 
   public async register(): Promise<void> {
     if (this.form.valid) {
+      this.errorMessage = false;
       await this.userService.register(this.form.value);
-      this.router.navigate(['login']);
+      this.aciertMessage= true;
+    } else {
+      this.aciertMessage= false;
+      this.errorMessage = true;
     }
   }
 

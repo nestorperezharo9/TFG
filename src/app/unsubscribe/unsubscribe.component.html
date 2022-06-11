@@ -1,5 +1,7 @@
 <div class="pagewrap">
     <form class="form" [formGroup]="form" (ngSubmit)="unsubscribe()">
+      <span *ngIf="errorMessage" class="errorMessage"><strong>Campos erróneos, por favor, pruébelo de nuevo.</strong></span>
+      <span *ngIf="aciertMessage" class="aciertMessage"><strong>Correcto! Has dado de Baja a un usuario o simplemente ese usuario no existe.</strong></span>
         <h3 class="title">Dar de BAJA en MIDIS</h3>
         <div class="container">
           <input class="container__input" type="text" formControlName="identifier" placeholder="12345678X">
