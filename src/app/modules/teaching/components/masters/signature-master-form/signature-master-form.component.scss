@@ -30,6 +30,7 @@
     }
 
     .form {
+        display: grid;
         margin: 0 auto;
         width: 700px;  
         background-color:#E5EFF5;;
@@ -39,7 +40,6 @@
 
         label {
         font-family: "Rubik",Arial,Helvetica,sans-serif;
-        padding: 5px;
         font-size: 20px;
         line-height: 45px;
         color: #05476D;
@@ -47,8 +47,6 @@
          
         input {
             padding: 4px;
-            padding-right: 90px;
-            margin-left: 15px;
             background-color: #FFD07F;
             color: #3385B4;
         }
