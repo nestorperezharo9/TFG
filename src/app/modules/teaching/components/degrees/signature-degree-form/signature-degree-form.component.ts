@@ -34,9 +34,9 @@ export class SignatureDegreeFormComponent implements OnInit {
       department : new FormControl([], Validators.required),
       type : new FormControl('', Validators.required),
       character : new FormControl('', Validators.required),
-      duration : new FormControl(null, Validators.required),
-      credits : new FormControl(null, Validators.required),
-      course : new FormControl(null, Validators.required),
+      duration : new FormControl(null, Validators.compose([Validators.min(1), Validators.max(2),Validators.required])),
+      credits : new FormControl(null, Validators.compose([Validators.min(1), Validators.max(12),Validators.required])),
+      course : new FormControl(null, Validators.compose([Validators.min(1), Validators.max(5),Validators.required])),
       teachingProject : new FormControl('', Validators.required),
       courseId : new FormControl('', Validators.required)
     })
